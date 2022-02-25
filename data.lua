@@ -1,5 +1,7 @@
+require("prototypes.achievements.aio1")
 require("prototypes.categories.aioTab")
 require("prototypes.entities.aio1")
 require("prototypes.items.aio1")
 require("prototypes.recipes.aio1")
 require("prototypes.recipes.aio1-recipes")
+require("prototypes.technologies.aio1")

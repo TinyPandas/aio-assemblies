@@ -40,7 +40,7 @@ local function convertToBase(i_list)
             for i, j in pairs(base_items) do
                 final_ingredients[i] = (j * amount) + (final_ingredients[i] or 0)
             end
-        end        
+        end
     end
 
     local list = {}
@@ -113,15 +113,15 @@ for p,k in pairs(data.raw["technology"]) do
                         recipe_list[j.recipe] = true
                     end
                 end
-            end		 
+            end
         end
-    end	 
+    end
 end
 
 for item, _ in pairs(recipe_list) do
     local recipe_data = data.raw.recipe[item]
     local recipe = recipe_data["normal"] or recipe_data
-    
+
     local i_list = recipe["ingredients"]
     local res = recipe["result"]
     local resC = recipe["result_count"] or 1
