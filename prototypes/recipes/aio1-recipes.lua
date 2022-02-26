@@ -1,6 +1,6 @@
 local tier_one_items = {
     ["iron-plate"] = true, ["copper-plate"] = true, ["steel-plate"] = true, ["coal"] = true,
-    ["stone"] = true, ["wood"] = true
+    ["stone-brick"] = true, ["wood"] = true, ["stone"] = true
 }
 
 local function getBaseIngredients(ingredient, baseIngredients)
@@ -119,6 +119,9 @@ for p,k in pairs(data.raw["technology"]) do
 end
 
 for item, _ in pairs(recipe_list) do
+    -- Ignore wall in stage one of aio due to some recipes requiring stone
+    -- as a raw resource, and stone brick needs to be smelted.
+    if item == "wall" then return end
     local recipe_data = data.raw.recipe[item]
     local recipe = recipe_data["normal"] or recipe_data
 
