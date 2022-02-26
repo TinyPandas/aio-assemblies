@@ -21,7 +21,8 @@ data:extend({
         },
         prerequisites = {
             "automation-2",
-            "electric-energy-distribution-1"
+            "electric-energy-distribution-1",
+            "steel-processing"
         },
         order = "c-a"
     }
